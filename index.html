@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peace Café Recruitment 2026</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+  body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+}
+ html {
+  scroll-behavior: smooth;
+}
+
+
+.hero-bg {
+  background: radial-gradient(circle at top, #2563eb, #1e3a8a);
+}
+
+.glass {
+  background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  border: 1px solid rgba(255,255,255,0.15);
+  
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.card {
+  transition: all 0.25s ease;
+}
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes successPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+.animate-success {
+    animation: successPop .5s ease-out;
+}
+  </style>
+    </head>
+    
+    <body class="bg-slate-50">
+    
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center justify-center px-6">
+    
+    <div class="max-w-4xl text-center text-white fade-in">
+    
+    <p class="text-blue-200 mb-4 tracking-wide uppercase text-sm">
+    Peace Café | BRAC University
+    </p>
+    
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+    Build Peace Together<br>
+    
+    </h1>
+    
+    <p class="text-lg md:text-xl text-blue-100 mb-8">
+    Join a student-led community working on social impact
+    and real-world peacebuilding initiatives.
+    </p>
+    
+    <a href="#register"
+    class="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold hover:scale-105 transition inline-block">
+    Apply for Interview
+    </a>
+    
+    <!-- LIVE COUNTER -->
+    <div class="mt-8">
+    <div class="inline-block glass px-6 py-3 rounded-full text-white">
+    🔵 <span id="applicantCount">0</span> students already applied
+    </div>
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <section class="py-10 bg-white">
+    
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 text-center gap-6">
+    
+    <div class="card bg-slate-50 p-6 rounded-xl">
+    <h3 class="text-2xl font-bold text-blue-600">500+</h3>
+    <p class="text-slate-600">Students Engaged</p>
+    </div>
+    
+    <div class="card bg-slate-50 p-6 rounded-xl">
+    <h3 class="text-2xl font-bold text-blue-600">50+</h3>
+    <p class="text-slate-600">Projects Completed</p>
+    </div>
+    
+    <div class="card bg-slate-50 p-6 rounded-xl">
+    <h3 class="text-2xl font-bold text-blue-600">1 Vision</h3>
+    <p class="text-slate-600">Peace Through Action</p>
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- REGISTRATION FORM -->
+    <section id="register" class="py-28 px-6 bg-slate-50 scroll-mt-50">
+    
+    <div class="max-w-3xl mx-auto">
+    
+    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 fade-in">
+    
+    <h2 class="text-4xl font-bold text-center text-slate-800 mb-3">
+    Registration Form
+    </h2>
+    
+    <p class="text-center text-slate-500 mb-10">
+    Peace Café | Club Fair Summer 2026
+    </p>
+    
+    <form id="registrationForm"
+      class="space-y-8 transition-all duration-500">
+    
+    <!-- Full Name -->
+    <div>
+    <label class="block mb-2 font-medium">
+    Full Name *
+    </label>
+    
+    <input
+    type="text"
+    name="fullName"
+    required
+    class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+    </div>
+    
+    <!-- Student ID -->
+    <div>
+    <label class="block mb-2 font-medium">
+    Student ID *
+    </label>
+    
+    <input
+    type="text"
+    name="studentId"
+    required
+    class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+    </div>
+    
+    <!-- BRAC Email -->
+    <div>
+    <label class="block mb-2 text-sm font-medium text-slate-600">
+    BRAC University Email *
+    </label>
+    
+    <div class="flex rounded-xl overflow-hidden border border-slate-200 bg-slate-50 focus-within:ring-2 focus-within:ring-blue-500">
+    
+    <input
+    type="text"
+    name="bracEmailUsername"
+    id="bracEmailUsername"
+    required
+    placeholder="john.doe"
+    class="flex-1 px-4 py-3 bg-transparent outline-none">
+    
+    <span class="px-4 py-3 bg-slate-100 text-slate-500 border-l border-slate-200">
+    @g.bracu.ac.bd
+    </span>
+    
+    </div>
+    </div>
+    
+    
+    <!-- Phone -->
+    <div>
+    <label class="block mb-2 font-medium">
+    Contact Number *
+    </label>
+    
+    <input
+    type="tel"
+    name="phone"
+    required
+    class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+    </div>
+    
+    <!-- Department -->
+    <div>
+    <label class="block mb-2 font-medium">
+    Department *
+    </label>
+    
+    <input
+    type="text"
+    name="department"
+    required
+    placeholder="e.g. CSE, BBA, EEE"
+    class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+    </div>
+    
+    <!-- Semester -->
+    <div>
+    <label class="block mb-2 font-medium">
+    Semester *
+    </label>
+    
+    <select
+    name="semester"
+    required
+    class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+    
+    
+    <option value="">Select Semester</option>
+    <option>1st Semester</option>
+    <option>2nd Semester</option>
+    <option>3rd Semester</option>
+    <option>4th Semester</option>
+    <option>5th Semester</option>
+    <option>6th Semester</option>
+    <option>7th Semester</option>
+    <option>8th Semester</option>  
+    <option>9th Semester</option>
+    <option>10th Semester</option>
+    <option>11th Semester</option>
+    <option>12th Semester</option>
+    <option>12th Semester+</option>
+    <option>Masters</option>
+    
+    </select>
+    </div>
+    
+    
+    
+    
+    <!-- Submit -->
+    <div class="border-t border-slate-100 pt-8 mt-8">
+    
+    <button
+    type="submit"
+    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-xl font-medium text-base transition shadow-sm hover:shadow-md">
+    
+    Submit Form
+    
+    </button>
+    
+    </div>
+    
+    </form>
+    
+    <!-- Success Message -->
+
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <footer class="bg-slate-900 text-white text-center py-8">
+    <h3 class="font-semibold text-lg">
+    Peace Café • BRAC University
+    </h3>
+    
+    <p class="text-slate-400 mt-2">
+    By lifting each other up, we lift ourselves up
+    </p>
+    </footer>
+    
+    <script>
+    
+    const form = document.getElementById('registrationForm');
+  const submitBtn = document.querySelector('button[type="submit"]');
+  
+  form.addEventListener('submit', async (e) => {
+    
+    e.preventDefault();
+    
+    if (submitBtn.disabled) return;
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+    
+    try {
+      
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      data.bracEmail =
+        data.bracEmailUsername.trim() +
+        "@g.bracu.ac.bd";
+      delete data.bracEmailUsername;
+      
+      const response = await fetch(
+                                   "https://script.google.com/macros/s/AKfycbx5lf2oQCBhnazUXn851lBD6g_Is3xXgxfAx28OyQN_AU0wm1NVtDnSYK1nEGig9mOevw/exec",
+                                   {
+        method: "POST",
+        body: JSON.stringify(data)
+      }
+      );
+      
+      const result = (await response.text()).trim();
+      
+      console.log("SERVER RESPONSE:", JSON.stringify(result));
+      
+      // Duplicate check
+      if (result === "Already Registered") {
+        
+        alert("This Student ID has already registered.");
+        
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Register for Interview";
+        
+        return;
+      }
+      
+      // Success case
+      if (result === "Success") {
+        
+        document.getElementById('registrationForm')
+        .style.opacity = "0.4";
+        form.reset();
+
+document.getElementById('successOverlay')
+    .classList.remove('hidden');
+    setTimeout(() => {
+
+    document.getElementById('successOverlay')
+        .classList.add('hidden');
+
+}, 4000);
+        
+      } else {
+        
+        alert("Unexpected response: " + result);
+        
+      }
+      
+    } catch (error) {
+      
+      console.error(error);
+      
+      alert("Something went wrong. Please try again.");
+      
+    } finally {
+      
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Register for Interview";
+    }
+    
+  });
+  async function updateCounter() {
+    
+    try {
+      
+      const response = await fetch(
+                                   "https://script.google.com/macros/s/AKfycbx5lf2oQCBhnazUXn851lBD6g_Is3xXgxfAx28OyQN_AU0wm1NVtDnSYK1nEGig9mOevw/exec",);
+      const data = await response.json();
+      
+      document.getElementById("applicantCount")
+        .innerText = data.count;
+      
+    } catch (error) {
+      console.log("Counter update failed", error);
+    }
+  }
+  
+  // initial load
+  updateCounter();
+  
+  // update every 5 seconds
+  setInterval(updateCounter, 5000);                        
+  
+  </script>
+
+  <!-- SUCCESS OVERLAY -->
+<div id="successOverlay"
+     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+
+    <div class="bg-white rounded-3xl p-10 max-w-md w-[90%] text-center animate-success">
+        
+        <div class="text-6xl mb-4">🕊️</div>
+
+        <h2 class="text-3xl font-bold text-slate-800 mb-3">
+            Application Received
+        </h2>
+
+        <p class="text-slate-600">
+            Thank you for applying to Peace Café.
+            We'll contact you soon regarding interviews.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+    
