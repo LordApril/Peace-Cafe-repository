@@ -40,75 +40,530 @@ body{
 .card:hover{
     transform:translateY(-8px);
 }
+.impact-card{
+    transition:all .3s ease;
+}
 
+.impact-card:hover{
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 20px 40px rgba(96,165,250,0.25);
+
+    border-color:rgba(255,255,255,0.35);
+}
+
+
+/* Navbar Hover Animation */
+
+/* Navbar Links */
+
+#navLinks a{
+    color:white;
+    transition:0.3s;
+    position:relative;
+}
+
+/* Underline Animation */
+
+#navLinks a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:width .3s ease;
+}
+
+#navLinks a:hover::after{
+    width:100%;
+}
+
+/* Navbar After Scrolling */
+
+#navbar.scrolled{
+    background:white;
+    backdrop-filter:blur(12px);
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+#navbar.scrolled #logoText{
+    color:#2563eb;
+}
+
+#navbar.scrolled #navLinks a{
+    color:#1e293b;
+}
+
+#navbar.scrolled #navLinks a::after{
+    background:#2563eb;
+}
+.department-btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:140px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:20px;
+
+    font-size:1.4rem;
+    font-weight:600;
+
+    color:#1e293b;
+
+    text-decoration:none;
+
+    transition:all .35s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.department-btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        rgba(239,246,255,1) 0%,
+        rgba(219,234,254,1) 50%,
+        rgba(191,219,254,1) 100%
+    );
+
+    border-color:#60a5fa;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,0.15);
+}
+.gradient-btn{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb 0%,
+        #3b82f6 50%,
+        #60a5fa 100%
+    );
+
+    color:white;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,0.25);
+}
+
+.gradient-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        #1d4ed8 0%,
+        #2563eb 50%,
+        #3b82f6 100%
+    );
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,0.35);
+}
+.info-card{
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.info-card:hover{
+
+    background: linear-gradient(
+        135deg,
+        rgba(239,246,255,1) 0%,
+        rgba(219,234,254,1) 50%,
+        rgba(191,219,254,1) 100%
+    );
+
+    border-color:#60a5fa;
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,0.15);
+}
+.impact-bg{
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(147,197,253,.25),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at bottom right,
+        rgba(255,255,255,.08),
+        transparent 40%
+    ),
+
+    linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #172554 35%,
+        #1d4ed8 70%,
+        #60a5fa 100%
+    );
+}
+.glass-card{
+    background:rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.20);
+
+    border-radius:24px;
+
+    transition:all .35s ease;
+}
+
+.glass-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 20px 40px rgba(96,165,250,0.25);
+
+    border-color:rgba(96,165,250,0.4);
+}
+.panel-card{
+
+    transition:all .45s ease;
+
+    cursor:pointer;
+}
+
+.panel-card img{
+
+    transition:transform .6s ease;
+}
+
+.panel-card:hover{
+
+    transform:translateY(-12px);
+}
+
+.panel-card:hover img{
+
+    transform:scale(1.08);
+}
+
+.panel-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(37,99,235,.35),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.45s ease;
+}
+
+.panel-card:hover .panel-overlay{
+
+    opacity:1;
+}
+
+.panel-card h3{
+
+    transition:.3s ease;
+}
+
+.panel-card:hover h3{
+
+    color:#2563eb;
+}
+.featured-event{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:all .5s ease;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.12);
+}
+
+.featured-event img{
+
+    transition:transform .8s ease;
+}
+
+.featured-event:hover img{
+
+    transform:scale(1.05);
+}
+
+.featured-content{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:50px;
+
+    color:white;
+
+    background:linear-gradient(
+        to top,
+        rgba(15,23,42,.9),
+        rgba(15,23,42,.2),
+        transparent
+    );
+}
+
+.event-tag{
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(8px);
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+}
+
+.event-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:all .4s ease;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.05);
+}
+
+.event-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:transform .6s ease;
+}
+
+.event-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(37,99,235,.15);
+}
+
+.event-card:hover img{
+
+    transform:scale(1.08);
+}
+
+.event-info{
+
+    padding:24px;
+}
+
+.event-info h3{
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+.event-info p{
+
+    color:#64748b;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAV LINKS */
+.nav-link {
+    color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #60a5fa;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ACTIVE LINK */
+.nav-link.active {
+    color: #60a5fa;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* SCROLLED NAV */
+#navbar.scrolled {
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+#navbar.scrolled #logoText {
+    color: #2563eb;
+}
+
+#navbar.scrolled .nav-link {
+    color: #1e293b;
+}
+
+#navbar.scrolled .nav-link::after {
+    background: #2563eb;
+}
+
+/* MOBILE LINKS */
+.mobile-link {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 </style>
+
+
 
 </head>
 
 <body class="bg-white text-slate-800">
 
 <!-- NAVBAR -->
-<nav class="fixed top-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+<nav id="navbar"
+     class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
 
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-<h1 class="font-bold text-xl text-blue-700">
-🕊 Peace Café
-</h1>
+    <!-- LOGO -->
+    <a href="#home"
+       id="logoText"
+       class="text-2xl font-bold text-white">
+        🕊 Peace Café | BRAC University
+    </a>
 
-<div class="hidden md:flex gap-6 text-sm">
+    <!-- DESKTOP LINKS -->
+    <div id="navLinks"
+         class="hidden md:flex items-center gap-8 text-sm font-medium">
 
-<a href="#about">About</a>
-<a href="#cpj">CPJ</a>
-<a href="#departments">Departments</a>
-<a href="#events">Events</a>
-<a href="#gallery">Gallery</a>
-<a href="#board">Board</a>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#cpj" class="nav-link">CPJ</a>
+        <a href="#departments" class="nav-link">Departments</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#board" class="nav-link">Board</a>
+        <a href="#alumni" class="nav-link">Alumni</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+
+    </div>
+
+    <!-- MOBILE BUTTON -->
+    <button id="menuBtn"
+            class="md:hidden text-white text-3xl">
+        ☰
+    </button>
 
 </div>
 
-<a href="recruitment.html"
-class="bg-blue-600 text-white px-5 py-2 rounded-full">
-Apply Now
-</a>
+<!-- MOBILE MENU -->
+<div id="mobileMenu"
+     class="hidden md:hidden flex flex-col gap-4 px-6 pb-6 bg-slate-900 text-white">
+
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#cpj" class="mobile-link">CPJ</a>
+    <a href="#departments" class="mobile-link">Departments</a>
+    <a href="#events" class="mobile-link">Events</a>
+    <a href="#board" class="mobile-link">Board</a>
+    <a href="#alumni" class="mobile-link">Alumni</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
 
 </div>
 
 </nav>
 
 <!-- HERO -->
-<section class="hero-bg min-h-screen flex items-center">
+<section id="home"
+         class="hero-bg min-h-screen flex items-center">
 
 <div class="max-w-7xl mx-auto px-6 text-white">
 
 <h1 class="text-5xl md:text-7xl font-bold mb-6">
 
-Building Peace.<br>
-Empowering Leaders.
+By Lifting Each Other Up , We Lift Ourselves Up
 
 </h1>
 
 <p class="max-w-2xl text-lg text-slate-200 mb-8">
 
-A student-led platform under the Centre for Peace and Justice (CPJ),
-BRAC University.
+A student-led platform under the supervision of Centre for Peace and Justice, BRAC University.
 
 </p>
 
 <div class="flex gap-4">
 
 <a href="#about"
-class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold">
+class="gradient-btn px-6 py-3 rounded-full font-semibold">
 
 Explore More
 
 </a>
 
-<a href="recruitment.html"
-class="border border-white px-6 py-3 rounded-full">
+<a href="index.html"
+   class="px-6 py-3 rounded-full font-semibold text-white
+          bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400
+          shadow-md transition-all duration-300
+          hover:from-blue-700 hover:via-blue-600 hover:to-blue-500
+          hover:shadow-xl hover:-translate-y-1">
 
 Join Peace Café
-
 </a>
 
 </div>
@@ -118,13 +573,23 @@ Join Peace Café
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about"
+         class="py-32 bg-white">
 
 <div class="max-w-7xl mx-auto">
 
-<h2 class="text-4xl font-bold mb-10 text-center">
-About Peace Café
-</h2>
+<div class="text-center mb-16">
+
+    <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
+        WHO WE ARE
+    </p>
+
+    <h2 class="text-5xl font-bold text-slate-900 leading-tight">
+        A Community for Peace,<br>
+        Leadership & Social Impact
+    </h2>
+
+</div>
 
 <div class="grid md:grid-cols-2 gap-12 items-center">
 
@@ -133,17 +598,117 @@ src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
 class="rounded-3xl shadow-lg">
 
 <div>
+<h3 class="text-3xl font-bold text-slate-800 mb-6">
+
+Building Peace Through Student Action
+
+</h3>    
 
 <p class="text-lg leading-8 text-slate-600">
 
 Peace Café is a student-led platform under the Centre for Peace and Justice (CPJ),
-BRAC University. Established in 2021 and officially launched in 2022,
-it empowers students through leadership development, peacebuilding,
-community engagement, and social impact initiatives.
+BRAC University.
+
+Established in 2021 and officially launched in 2022, Peace Café empowers
+students through leadership development, peacebuilding initiatives,
+social justice advocacy, community engagement, and meaningful social action.
 
 </p>
+<div class="grid grid-cols-3 gap-4 mt-10">
+
+    <div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent">
+
+        <h4 class="text-3xl font-bold text-blue-600">
+            2021
+        </h4>
+
+        <p class="text-sm text-slate-600 mt-2">
+            Established
+        </p>
+
+    </div>
+
+    <div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent">
+
+        <h4 class="text-3xl font-bold text-blue-600">
+            2022
+        </h4>
+
+        <p class="text-sm text-slate-600 mt-2">
+            Official Launch
+        </p>
+         </div>
+<a href="https://cpj.bracu.ac.bd/" target="_blank">
+<div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent">
+
+    <h4 class="text-3xl font-bold text-blue-600">
+        CPJ
+    </h4>
+
+    <p class="text-sm text-slate-600 mt-2">
+        Supported By
+    </p>
 
 </div>
+</a>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="pb-32 bg-white">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-3 gap-8">
+
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+        <div class="text-4xl mb-4">🌱</div>
+
+        <h3 class="text-xl font-bold mb-3">
+            Leadership
+        </h3>
+
+        <p class="text-slate-600">
+            Developing responsible leaders who create
+            positive change in their communities.
+        </p>
+
+    </div>
+
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+        <div class="text-4xl mb-4">🤝</div>
+
+        <h3 class="text-xl font-bold mb-3">
+            Inclusion
+        </h3>
+
+        <p class="text-slate-600">
+            Building a culture of empathy,
+            diversity and belonging.
+        </p>
+
+    </div>
+
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+        <div class="text-4xl mb-4">🌍</div>
+
+        <h3 class="text-xl font-bold mb-3">
+            Social Impact
+        </h3>
+
+        <p class="text-slate-600">
+            Transforming ideas into meaningful
+            action through community engagement.
+        </p>
+
+    </div>
 
 </div>
 
@@ -152,54 +717,165 @@ community engagement, and social impact initiatives.
 </section>
 
 <!-- CPJ -->
-<section id="cpj" class="section bg-slate-50">
+<section id="cpj" class="py-32 px-6 bg-slate-50">
 
 <div class="max-w-7xl mx-auto text-center">
 
-<h2 class="text-4xl font-bold mb-6">
-Peace Café × CPJ
+<p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
+PEACE CAFÉ × CPJ
+</p>
+
+<h2 class="text-5xl font-bold text-slate-900 mb-6">
+Part of a Larger Movement
+for Peace and Justice
 </h2>
 
-<p class="max-w-4xl mx-auto text-slate-600 leading-8">
+<p class="max-w-4xl mx-auto text-lg text-slate-600 leading-8">
 
 Peace Café operates under the Centre for Peace and Justice (CPJ),
-BRAC University, promoting peacebuilding, inclusion,
-social justice, and leadership development.
+BRAC University.
+
+CPJ is dedicated to advancing peace, justice, inclusion,
+and social cohesion through research, education, dialogue,
+advocacy, and community engagement.
+
+Through Peace Café, students gain opportunities to participate
+in meaningful initiatives that connect academic learning with
+real-world social impact.
 
 </p>
+<div class="grid md:grid-cols-3 gap-8 mt-16">
+
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+        <div class="text-4xl mb-4">🌏</div>
+
+        <h3 class="text-xl font-bold mb-3">
+            Global Perspective
+        </h3>
+
+        <p class="text-slate-600">
+            Connecting local action with global
+            peacebuilding conversations.
+        </p>
+
+    </div>
+
+   <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+        <div class="text-4xl mb-4">📚</div>
+
+        <h3 class="text-xl font-bold mb-3">
+            Research & Advocacy
+        </h3>
+
+        <p class="text-slate-600">
+            Promoting evidence-based solutions
+            for justice and social cohesion.
+        </p>
+
+    </div>
+
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+        <div class="text-4xl mb-4">🤝</div>
+
+        <h3 class="text-xl font-bold mb-3">
+            Youth Leadership
+        </h3>
+
+        <p class="text-slate-600">
+            Empowering young people to become
+            changemakers.
+        </p>
+
+    </div>
+
+</div>
+<div class="mt-12">
+
+    <a href="https://cpj.bracu.ac.bd/"
+   target="_blank"
+   class="gradient-btn inline-flex items-center px-8 py-4 rounded-full font-medium">
+        EXPLORE MORE 
+
+    </a>
+
+</div>
 
 </div>
 
 </section>
 
 <!-- IMPACT -->
-<section class="section bg-blue-700 text-white">
+<section id="impact"
+         class="py-32 impact-bg text-white">
 
 <div class="max-w-7xl mx-auto">
 
-<h2 class="text-4xl font-bold text-center mb-12">
-Our Impact
-</h2>
+<div class="text-center mb-20">
+
+    <p class="uppercase tracking-[0.3em] text-blue-200 font-semibold mb-4">
+        OUR IMPACT
+    </p>
+
+    <h2 class="text-5xl font-bold">
+        Numbers That Tell Our Story
+    </h2>
+
+</div>
 
 <div class="grid md:grid-cols-4 gap-6">
 
-<div class="bg-white/10 p-8 rounded-2xl text-center">
-<h3 class="text-5xl font-bold">500+</h3>
+<div class="impact-card
+            bg-white/10
+            backdrop-blur-md
+            border border-white/20
+            p-8 rounded-2xl text-center">
+<h3 class="counter text-5xl font-bold"
+    data-target="500">
+    <div class="text-4xl mb-4">🎓</div>
+    0
+</h3>
 <p>Students Engaged</p>
 </div>
 
-<div class="bg-white/10 p-8 rounded-2xl text-center">
-<h3 class="text-5xl font-bold">50+</h3>
+<div class="impact-card
+            bg-white/10
+            backdrop-blur-md
+            border border-white/20
+            p-8 rounded-2xl text-center">
+<h3 class="counter text-5xl font-bold"
+    data-target="50">
+    <div class="text-4xl mb-4">📅</div>
+    0
+</h3>
 <p>Events</p>
 </div>
 
-<div class="bg-white/10 p-8 rounded-2xl text-center">
-<h3 class="text-5xl font-bold">1000+</h3>
+<div class="impact-card
+            bg-white/10
+            backdrop-blur-md
+            border border-white/20
+            p-8 rounded-2xl text-center">
+<h3 class="counter text-5xl font-bold"
+    data-target="1000">
+    <div class="text-4xl mb-4">🤝</div>
+    0
+</h3>
 <p>Volunteer Hours</p>
 </div>
 
-<div class="bg-white/10 p-8 rounded-2xl text-center">
-<h3 class="text-5xl font-bold">15+</h3>
+<div class="impact-card
+            bg-white/10
+            backdrop-blur-md
+            border border-white/20
+            p-8 rounded-2xl text-center">
+<h3 class="counter text-5xl font-bold"
+    data-target="15">
+    <div class="text-4xl mb-4">🌏</div>
+    0
+</h3>
 <p>Partners</p>
 </div>
 
@@ -214,26 +890,49 @@ Our Impact
 
 <div class="max-w-7xl mx-auto">
 
-<h2 class="text-4xl font-bold text-center mb-12">
-Departments
-</h2>
+<div class="text-center mb-20">
 
-<div class="grid md:grid-cols-3 gap-8">
+    <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
+        DEPARTMENTS
+    </p>
 
-<div class="card bg-slate-50 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">Operations</h3>
-<p>Internal management and coordination.</p>
+    <h2 class="text-5xl font-bold text-slate-900">
+        Meet the Teams Behind Peace Café
+    </h2>
+
 </div>
 
-<div class="card bg-slate-50 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">Human Resources</h3>
-<p>Member development and engagement.</p>
-</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<div class="card bg-slate-50 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">Public Relations</h3>
-<p>External communication and branding.</p>
-</div>
+<a href="departments/admin-finance.html"
+   class="department-btn">
+   Admin & Finance
+</a>
+
+<a href="departments/human-resources.html"
+   class="department-btn">
+   Human Resources
+</a>
+
+<a href="departments/event-management.html"
+   class="department-btn">
+   Event Management
+</a>
+
+<a href="departments/creative-it.html"
+   class="department-btn">
+   Creative & IT
+</a>
+
+<a href="departments/resource-publications.html"
+   class="department-btn">
+   Resource & Publications
+</a>
+
+<a href="departments/marketing.html"
+   class="department-btn">
+   Marketing
+</a>
 
 </div>
 
@@ -242,105 +941,201 @@ Departments
 </section>
 
 <!-- EVENTS -->
-<section id="events" class="section bg-slate-50">
+<!-- EVENTS -->
+<!-- EVENTS (HOME PAGE) -->
+<section id="events" class="py-32 bg-slate-50">
 
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12">
-Recent Events
+<!-- HEADER -->
+<div class="text-center mb-16">
+
+<p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
+EVENT HIGHLIGHT
+</p>
+
+<h2 class="text-5xl font-bold text-slate-900 mb-4">
+One Featured Story
 </h2>
 
-<div class="grid md:grid-cols-3 gap-8">
-
-<div class="bg-white rounded-3xl overflow-hidden shadow">
-<img src="https://picsum.photos/600/400">
-<div class="p-6">
-<h3 class="font-bold">Leadership Workshop</h3>
-</div>
-</div>
-
-<div class="bg-white rounded-3xl overflow-hidden shadow">
-<img src="https://picsum.photos/601/400">
-<div class="p-6">
-<h3 class="font-bold">Community Outreach</h3>
-</div>
-</div>
-
-<div class="bg-white rounded-3xl overflow-hidden shadow">
-<img src="https://picsum.photos/602/400">
-<div class="p-6">
-<h3 class="font-bold">Peace Dialogue</h3>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="section">
-
-<div class="max-w-7xl mx-auto">
-
-<h2 class="text-4xl font-bold text-center mb-12">
-Gallery
-</h2>
-
-<div class="grid md:grid-cols-4 gap-4">
-
-<img src="https://picsum.photos/400/400">
-<img src="https://picsum.photos/401/400">
-<img src="https://picsum.photos/402/400">
-<img src="https://picsum.photos/403/400">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section bg-blue-50">
-
-<div class="max-w-4xl mx-auto text-center">
-
-<h2 class="text-4xl font-bold mb-8">
-Testimonials
-</h2>
-
-<p class="text-xl italic">
-
-"Peace Café gave me opportunities to grow as a leader and serve the community."
-
+<p class="text-slate-600 max-w-3xl mx-auto">
+Discover our most recent and impactful initiative from Peace Café.
 </p>
 
 </div>
 
+<!-- FEATURED EVENT ONLY -->
+<a href="event-detail.html"
+   class="block featured-event rounded-[32px] overflow-hidden">
+
+<img src="https://picsum.photos/1400/700"
+     class="w-full h-[520px] object-cover">
+
+<div class="featured-content">
+
+<span class="event-tag">Featured Event</span>
+
+<h3 class="text-4xl font-bold mt-4 mb-3">
+Leadership Summit 2026
+</h3>
+
+<p class="text-blue-100 max-w-2xl">
+Bringing together students and leaders to explore peacebuilding, leadership, and social impact.
+</p>
+
+</div>
+
+</a>
+
+<!-- CTA -->
+<div class="text-center mt-12">
+
+<a href="events.html"
+   class="gradient-btn inline-block px-8 py-4 rounded-full font-semibold">
+
+View All Events
+
+</a>
+
+</div>
+
+</div>
+
 </section>
+
+
 
 <!-- BOARD -->
-<section id="board" class="section">
+<!-- PANEL MEMBERS -->
+<section id="board" class="py-32 bg-gradient-to-b from-white to-slate-50">
 
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12">
-Executive Board
+<div class="text-center mb-20">
+
+<p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
+LEADERSHIP
+</p>
+
+<h2 class="text-5xl font-bold text-slate-900 mb-4">
+Panel Members
 </h2>
 
-<div class="grid md:grid-cols-4 gap-8">
+<p class="text-slate-600 max-w-2xl mx-auto">
+Meet the dedicated student leaders guiding Peace Café's vision,
+initiatives, and impact.
+</p>
 
-<div class="text-center">
-<img src="https://picsum.photos/300"
-class="rounded-full mx-auto mb-4">
-<h3 class="font-bold">President</h3>
 </div>
 
-<div class="text-center">
-<img src="https://picsum.photos/301"
-class="rounded-full mx-auto mb-4">
-<h3 class="font-bold">Vice President</h3>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+<!-- PRESIDENT -->
+<div class="panel-card">
+
+    <div class="relative overflow-hidden rounded-3xl">
+
+        <img
+        src="https://via.placeholder.com/500x600"
+        class="w-full h-[380px] object-cover">
+
+        <div class="panel-overlay"></div>
+
+    </div>
+
+    <div class="pt-6 text-center">
+
+        <h3 class="text-2xl font-bold">
+            President
+        </h3>
+
+        <p class="text-blue-600 mt-2">
+            Ziana Tasnim Imam
+        </p>
+
+    </div>
+
+</div>
+
+<!-- VP -->
+<div class="panel-card">
+
+    <div class="relative overflow-hidden rounded-3xl">
+
+        <img
+        src="https://via.placeholder.com/500x600"
+        class="w-full h-[380px] object-cover">
+
+        <div class="panel-overlay"></div>
+
+    </div>
+
+    <div class="pt-6 text-center">
+
+        <h3 class="text-2xl font-bold">
+            Vice President
+        </h3>
+
+        <p class="text-blue-600 mt-2">
+            Tabassum Hasnat
+        </p>
+
+    </div>
+
+</div>
+
+<!-- GS -->
+<div class="panel-card">
+
+    <div class="relative overflow-hidden rounded-3xl">
+
+        <img
+        src="https://via.placeholder.com/500x600"
+        class="w-full h-[380px] object-cover">
+
+        <div class="panel-overlay"></div>
+
+    </div>
+
+    <div class="pt-6 text-center">
+
+        <h3 class="text-2xl font-bold">
+            General Secretary
+        </h3>
+
+        <p class="text-blue-600 mt-2">
+            Sohany Jannat
+        </p>
+
+    </div>
+
+</div>
+
+<!-- TREASURER -->
+<div class="panel-card">
+
+    <div class="relative overflow-hidden rounded-3xl">
+
+        <img
+        src="https://via.placeholder.com/500x600"
+        class="w-full h-[380px] object-cover">
+
+        <div class="panel-overlay"></div>
+
+    </div>
+
+    <div class="pt-6 text-center">
+
+        <h3 class="text-2xl font-bold">
+            Treasurer
+        </h3>
+
+        <p class="text-blue-600 mt-2">
+            Orpita Nasrin
+        </p>
+
+    </div>
+
 </div>
 
 </div>
@@ -349,40 +1144,214 @@ class="rounded-full mx-auto mb-4">
 
 </section>
 
-<!-- ALUMNI -->
-<section class="section bg-slate-900 text-white">
+<!-- ALUMNI IMPACT -->
+<section id="alumni" class="py-32 bg-white">
 
-<div class="max-w-7xl mx-auto text-center">
+<div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold mb-10">
-Alumni Spotlight
+<!-- HEADER -->
+<div class="text-center mb-20">
+
+<p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
+ALUMNI IMPACT
+</p>
+
+<h2 class="text-5xl font-bold text-slate-900 mb-4">
+Voices of Our Alumni
 </h2>
 
-<p>
-Showcase distinguished former members here.
+<p class="text-slate-600 max-w-3xl mx-auto">
+Hear from former Peace Café members who continue to create impact beyond university life.
 </p>
+
+</div>
+
+<!-- FEATURED TESTIMONIAL -->
+<div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+
+<!-- IMAGE / VISUAL CARD -->
+<div class="bg-slate-50 rounded-3xl p-10 shadow-sm border border-transparent hover:shadow-md transition">
+
+<div class="text-6xl mb-6">🎓</div>
+
+<h3 class="text-2xl font-bold mb-4">
+"Peace Café shaped my leadership journey"
+</h3>
+
+<p class="text-slate-600 leading-8">
+Being part of Peace Café helped me understand real-world leadership,
+teamwork, and social responsibility. The experiences I gained here
+continue to guide my professional journey today.
+</p>
+
+<div class="mt-6 font-semibold text-blue-600">
+— Former President, Batch 2023
+</div>
+
+</div>
+
+<!-- SUPPORT IMAGE / CARD -->
+<div class="bg-gradient-to-br from-blue-50 to-slate-100 rounded-3xl p-12">
+
+<h3 class="text-3xl font-bold mb-4">
+Continuing the Legacy
+</h3>
+
+<p class="text-slate-600 leading-8">
+Our alumni are now working in NGOs, corporate leadership roles,
+research institutions, and social impact organizations worldwide.
+</p>
+
+<div class="grid grid-cols-3 gap-4 mt-8">
+
+<div class="info-card bg-white p-6 rounded-2xl text-center">
+<p class="text-2xl font-bold text-blue-600">50+</p>
+<p class="text-sm text-slate-600">Alumni</p>
+</div>
+
+<div class="info-card bg-white p-6 rounded-2xl text-center">
+<p class="text-2xl font-bold text-blue-600">20+</p>
+<p class="text-sm text-slate-600">Organizations</p>
+</div>
+
+<div class="info-card bg-white p-6 rounded-2xl text-center">
+<p class="text-2xl font-bold text-blue-600">10+</p>
+<p class="text-sm text-slate-600">Countries</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PREVIEW TESTIMONIAL CARDS -->
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent">
+<p class="text-slate-600 italic">
+“Peace Café gave me the confidence to speak, lead, and grow.”
+</p>
+<div class="mt-4 font-semibold text-blue-600">
+Alumni Member
+</div>
+</div>
+
+<div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent">
+<p class="text-slate-600 italic">
+“I learned more about leadership here than in any classroom.”
+</p>
+<div class="mt-4 font-semibold text-blue-600">
+HR Coordinator, Batch 2022
+</div>
+</div>
+
+<div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent">
+<p class="text-slate-600 italic">
+“This platform changed how I see social impact work.”
+</p>
+<div class="mt-4 font-semibold text-blue-600">
+Event Lead, Batch 2021
+</div>
+</div>
+
+</div>
+
+<!-- CTA -->
+<div class="text-center mt-12">
+
+<a href="alumni.html"
+   class="gradient-btn inline-block px-8 py-4 rounded-full font-semibold">
+
+Explore More Alumni Stories
+
+</a>
+
+</div>
 
 </div>
 
 </section>
 
 <!-- FAQ -->
-<section class="section">
+<!-- FAQ -->
+<section id="faq" class="py-32 bg-slate-50">
 
-<div class="max-w-4xl mx-auto">
+<div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12">
-FAQ
+<!-- HEADER -->
+<div class="text-center mb-16">
+
+<h2 class="text-5xl font-bold text-slate-900 mb-4">
+Frequently Asked Questions
 </h2>
 
-<div class="space-y-4">
+<p class="text-slate-600 max-w-2xl mx-auto">
+Quick answers to the most common questions about Peace Café.
+</p>
 
-<div class="bg-slate-50 p-6 rounded-xl">
-What is Peace Café?
 </div>
 
-<div class="bg-slate-50 p-6 rounded-xl">
-How can I join?
+<!-- GRID -->
+<div class="grid md:grid-cols-2 gap-8">
+
+<!-- CARD 1 -->
+<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+<button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
+What is Peace Café?
+<span class="text-blue-600 text-2xl">+</span>
+</button>
+
+<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+Peace Café is a student-led platform under the Centre for Peace and Justice (CPJ), BRAC University,
+focused on leadership, peacebuilding, and social impact initiatives.
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+<button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
+How can I join Peace Café?
+<span class="text-blue-600 text-2xl">+</span>
+</button>
+
+<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+You can join by applying during our recruitment cycles. Announcements are published on our website
+and official social media pages.
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+<button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
+Who can apply?
+<span class="text-blue-600 text-2xl">+</span>
+</button>
+
+<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+All BRAC University students who are interested in leadership, social impact, and community engagement
+are eligible to apply.
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+
+<button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
+Do I need prior experience?
+<span class="text-blue-600 text-2xl">+</span>
+</button>
+
+<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+No prior experience is required. We focus on learning, leadership development, and collaboration.
+</div>
+
 </div>
 
 </div>
@@ -391,42 +1360,339 @@ How can I join?
 
 </section>
 
-<!-- JOIN -->
-<section class="section bg-blue-700 text-white text-center">
+<!-- JOIN / RECRUITMENT CTA -->
+<section class="py-32 bg-blue-700 text-white relative overflow-hidden">
 
-<h2 class="text-5xl font-bold mb-6">
-Ready to Become a Peace Ambassador?
+<!-- BACKGROUND DECOR -->
+<div class="absolute inset-0 opacity-20">
+    <div class="absolute w-96 h-96 bg-white rounded-full blur-3xl top-[-100px] left-[-100px]"></div>
+    <div class="absolute w-96 h-96 bg-white rounded-full blur-3xl bottom-[-120px] right-[-120px]"></div>
+</div>
+
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+
+<div class="grid md:grid-cols-2 gap-12 items-center">
+
+<!-- LEFT CONTENT -->
+<div>
+
+<h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+Ready to Become a<br>
+Peace Ambassador?
 </h2>
 
-<p class="mb-8">
-Join a community committed to leadership and social impact.
+<p class="text-blue-100 text-lg leading-8 mb-8">
+Join a community of passionate students working on leadership,
+peacebuilding, and social impact at BRAC University.
+This is your opportunity to grow, lead, and make real change.
 </p>
 
-<a href="recruitment.html"
-class="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold">
+<!-- KEY POINTS -->
+<div class="space-y-4 mb-10">
 
-Apply for Membership
+<div class="flex items-center gap-3">
+<span class="text-2xl">🌱</span>
+<p>Leadership & skill development</p>
+</div>
 
+<div class="flex items-center gap-3">
+<span class="text-2xl">🤝</span>
+<p>Community engagement opportunities</p>
+</div>
+
+<div class="flex items-center gap-3">
+<span class="text-2xl">🌍</span>
+<p>Real-world social impact experience</p>
+</div>
+
+</div>
+
+<!-- CTA BUTTON -->
+<a href="index.html"
+   class="inline-block px-10 py-4 rounded-full font-bold text-blue-700
+          bg-gradient-to-r from-white via-blue-50 to-blue-100
+          shadow-md transition-all duration-300
+          hover:from-blue-50 hover:via-blue-100 hover:to-blue-200
+          hover:shadow-xl hover:-translate-y-1">
+
+Apply Now →
 </a>
+
+</div>
+
+<!-- RIGHT VISUAL CARD -->
+<div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10">
+
+<h3 class="text-2xl font-bold mb-6">
+Why Join Peace Café?
+</h3>
+
+<p class="text-blue-100 leading-7 mb-8">
+We are not just a club—we are a platform for students who want to
+create meaningful impact through collaboration and leadership.
+</p>
+
+<!-- STATS STYLE -->
+<div class="grid grid-cols-2 gap-6">
+
+<div class="bg-white/10 p-6 rounded-2xl text-center">
+<p class="text-3xl font-bold">500+</p>
+<p class="text-sm text-blue-100">Members</p>
+</div>
+
+<div class="bg-white/10 p-6 rounded-2xl text-center">
+<p class="text-3xl font-bold">50+</p>
+<p class="text-sm text-blue-100">Projects</p>
+</div>
+
+<div class="bg-white/10 p-6 rounded-2xl text-center">
+<p class="text-3xl font-bold">100+</p>
+<p class="text-sm text-blue-100">Events</p>
+</div>
+
+<div class="bg-white/10 p-6 rounded-2xl text-center">
+<p class="text-3xl font-bold">4+</p>
+<p class="text-sm text-blue-100">Years</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-slate-950 text-white py-12">
+<!-- FOOTER -->
+<footer class="bg-slate-950 text-white py-16">
 
-<div class="max-w-7xl mx-auto px-6 text-center">
+<div class="max-w-7xl mx-auto px-6">
 
-<h3 class="text-2xl font-bold mb-3">
-Peace Café
+<div class="grid md:grid-cols-2 gap-12">
+
+<!-- COLUMN 1: ADDRESS -->
+<div>
+
+<h3 class="text-xl font-bold mb-6 text-white">
+Centre for Peace and Justice <br> BRAC University
 </h3>
 
-<p class="text-slate-400">
-Powered by the Centre for Peace and Justice (CPJ)
+<p class="text-slate-400 leading-7">
+Kha 224 Pragati Sarani, Merul Badda , Dhaka 1212, <br>
+Bangladesh
+</p>
+
+<p class="text-slate-500 mt-4 text-sm">
+Official Institution Partner
 </p>
 
 </div>
 
-</footer>
+<!-- COLUMN 2: PEACE CAFÉ -->
+<div>
 
+<h3 class="text-2xl font-bold mb-4">
+🕊 Peace Café
+</h3>
+
+<p class="text-slate-400 leading-7 mb-6">
+A student-led platform under the Centre for Peace and Justice (CPJ),
+BRAC University.
+</p>
+
+<p class="text-lg italic text-slate-300 border-l-4 border-blue-600 pl-4">
+“By lifting each other up, we lift ourselves up.”
+</p>
+
+</div>
+
+</div>
+
+<!-- BOTTOM BAR -->
+<div class="border-t border-slate-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
+
+<p class="text-slate-500 text-sm">
+© 2026 Peace Café, BRAC University. All rights reserved.
+</p>
+
+<p class="text-slate-600 text-sm mt-3 md:mt-0">
+Built with purpose & student leadership
+</p>
+
+</div>
+
+</div>
+
+</footer>
+<script>
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 50){
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
+<script>
+
+const counters =
+document.querySelectorAll('.counter');
+
+const observer =
+new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+const counter = entry.target;
+
+const target =
++counter.getAttribute('data-target');
+
+let count = 0;
+
+const increment =
+target / 80;
+
+const update = () => {
+
+if(count < target){
+
+count += increment;
+
+counter.innerText =
+Math.ceil(count);
+
+requestAnimationFrame(update);
+
+}
+
+else{
+
+counter.innerText =
+target + "+";
+
+}
+
+};
+
+update();
+
+observer.unobserve(counter);
+
+}
+
+});
+
+},{threshold:0.5});
+
+counters.forEach(counter =>
+observer.observe(counter));
+
+</script>
+<script>
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(q => {
+    q.addEventListener("click", () => {
+
+        const answer = q.nextElementSibling;
+        const icon = q.querySelector("span");
+
+        const isOpen = !answer.classList.contains("hidden");
+
+        // close all
+        document.querySelectorAll(".faq-answer").forEach(a => {
+            a.classList.add("hidden");
+        });
+
+        document.querySelectorAll(".faq-question span").forEach(i => {
+            i.textContent = "+";
+        });
+
+        // open current if closed
+        if(!isOpen){
+            answer.classList.remove("hidden");
+            icon.textContent = "−";
+        }
+
+    });
+});
+</script>
+<script>
+
+// =========================
+// MOBILE MENU TOGGLE
+// =========================
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+
+// close menu when clicking link
+document.querySelectorAll(".mobile-link").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
+});
+
+// =========================
+// NAVBAR SCROLL STYLE
+// =========================
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 50){
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+// =========================
+// ACTIVE SECTION HIGHLIGHT (SCROLL SPY)
+// =========================
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+
+        if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+    });
+
+});
+
+</script>
 </body>
 </html>
