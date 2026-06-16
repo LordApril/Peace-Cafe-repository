@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,7 +25,7 @@ body{
         rgba(15,23,42,.75),
         rgba(15,23,42,.75)
     ),
-    url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac");
+    url("Gemini_Generated_Image_dv7614dv7614dv76.png");
     
     background-size:cover;
     background-position:center;
@@ -468,6 +470,43 @@ html {
     padding: 10px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+/* FAQ Hover Effect */
+
+.faq-card .faq-answer{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    transition:all .4s ease;
+}
+
+.faq-card:hover .faq-answer{
+    max-height:400px;
+    opacity:1;
+    margin-top:16px;
+}
+
+.faq-card .faq-icon{
+    transition:transform .3s ease;
+}
+
+.faq-card:hover .faq-icon{
+    transform:rotate(45deg);
+}
+
+.faq-card{
+    transition:all .35s ease;
+}
+
+.faq-card:hover{
+    transform:translateY(-6px);
+    border-color:#60a5fa;
+    box-shadow:0 15px 35px rgba(37,99,235,.15);
+}
+.faq-card:hover .faq-question{
+    color:#2563eb;
+}
+
+
 </style>
 
 
@@ -556,7 +595,7 @@ Explore More
 
 </a>
 
-<a href="recruitment.html"
+<a href="index.html"
    class="px-6 py-3 rounded-full font-semibold text-white
           bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400
           shadow-md transition-all duration-300
@@ -574,11 +613,12 @@ Join Peace Café
 
 <!-- ABOUT -->
 <section id="about"
-         class="py-32 bg-white">
+         class="py-32 bg-white ">
 
 <div class="max-w-7xl mx-auto">
 
-<div class="text-center mb-16">
+<div class="text-center mb-16"
+     data-aos="fade-up">
 
     <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
         WHO WE ARE
@@ -657,8 +697,6 @@ social justice advocacy, community engagement, and meaningful social action.
 
 </div>
 
-</div>
-
 </section>
 <section class="pb-32 bg-white">
 
@@ -666,7 +704,9 @@ social justice advocacy, community engagement, and meaningful social action.
 
 <div class="grid md:grid-cols-3 gap-8">
 
-    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent"
+     data-aos="fade-up"
+     data-aos-delay="100">
 
         <div class="text-4xl mb-4">🌱</div>
 
@@ -681,7 +721,9 @@ social justice advocacy, community engagement, and meaningful social action.
 
     </div>
 
-    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent"
+     data-aos="fade-up"
+     data-aos-delay="200">
 
         <div class="text-4xl mb-4">🤝</div>
 
@@ -696,7 +738,9 @@ social justice advocacy, community engagement, and meaningful social action.
 
     </div>
 
-    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+    <div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent"
+     data-aos="fade-up"
+     data-aos-delay="300">
         <div class="text-4xl mb-4">🌍</div>
 
         <h3 class="text-xl font-bold mb-3">
@@ -717,9 +761,10 @@ social justice advocacy, community engagement, and meaningful social action.
 </section>
 
 <!-- CPJ -->
-<section id="cpj" class="py-32 px-6 bg-slate-50">
+<section id="cpj" class="py-32 px-6 bg-slate-50 ">
 
-<div class="max-w-7xl mx-auto text-center">
+<div class="max-w-7xl mx-auto text-center"
+     data-aos="fade-up">
 
 <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
 PEACE CAFÉ × CPJ
@@ -809,9 +854,10 @@ real-world social impact.
 
 <!-- IMPACT -->
 <section id="impact"
-         class="py-32 impact-bg text-white">
-
-<div class="max-w-7xl mx-auto">
+         class="py-32 impact-bg text-white ">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20"
+     data-aos="fade-up">
 
 <div class="text-center mb-20">
 
@@ -886,11 +932,12 @@ real-world social impact.
 </section>
 
 <!-- DEPARTMENTS -->
-<section id="departments" class="section">
+<section id="departments" class="section ">
 
 <div class="max-w-7xl mx-auto">
 
-<div class="text-center mb-20">
+<div class="text-center mb-20"
+     data-aos="fade-up">
 
     <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
         DEPARTMENTS
@@ -905,37 +952,50 @@ real-world social impact.
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 <a href="admin-finance.html"
-   class="department-btn">
+   class="department-btn"
+   data-aos="flip-left"
+   data-aos-delay="100">
    Admin & Finance
 </a>
 
 <a href="HR2.0.html"
-   class="department-btn">
+   class="department-btn"
+   data-aos="flip-left"
+   data-aos-delay="200">
    Human Resources
-</a>
+   </a>
 
 <a href="EM2.0.html"
-   class="department-btn">
+   class="department-btn"
+   data-aos="flip-left"
+   data-aos-delay="300">
    Event Management
 </a>
 
 <a href="c&it2.0.html"
-   class="department-btn">
+   class="department-btn"
+   data-aos="flip-left"
+   data-aos-delay="400">
    Creative & IT
 </a>
 
 <a href="R&P2.0.html"
-   class="department-btn">
-   Resource & Publications
+   class="department-btn"
+   data-aos="flip-left"
+   data-aos-delay="500">
+   Research and Publications
 </a>
 
 <a href="marketing.html"
-   class="department-btn">
+   class="department-btn"
+   data-aos="flip-left"
+   data-aos-delay="600">
    Marketing
 </a>
 
 </div>
 
+</div>
 </div>
 
 </section>
@@ -943,10 +1003,10 @@ real-world social impact.
 <!-- EVENTS -->
 <!-- EVENTS -->
 <!-- EVENTS (HOME PAGE) -->
-<section id="events" class="py-32 bg-slate-50">
-
+<section id="events" class="py-32 bg-slate-50 ">
 <div class="max-w-7xl mx-auto px-6">
-
+<div class="text-center mb-16"
+     data-aos="fade-up">
 <!-- HEADER -->
 <div class="text-center mb-16">
 
@@ -966,10 +1026,11 @@ Discover our most recent and impactful initiative from Peace Café.
 
 <!-- FEATURED EVENT ONLY -->
 <a href="event-detail.html"
-   class="block featured-event rounded-[32px] overflow-hidden">
+   class="block featured-event rounded-[32px] overflow-hidden"
+   data-aos="zoom-in-up">
 
 <img src="https://picsum.photos/1400/700"
-     class="w-full h-[520px] object-cover">
+     class="w-full h-[520px] object-cover rounded-[32px]">
 
 <div class="featured-content">
 
@@ -1001,6 +1062,8 @@ View All Events
 
 </div>
 
+</div>
+
 </section>
 
 
@@ -1011,7 +1074,8 @@ View All Events
 
 <div class="max-w-7xl mx-auto px-6">
 
-<div class="text-center mb-20">
+<div class="text-center mb-20"
+     data-aos="fade-up">
 
 <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
 LEADERSHIP
@@ -1031,7 +1095,9 @@ initiatives, and impact.
 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
 <!-- PRESIDENT -->
-<div class="panel-card">
+<div class="panel-card"
+     data-aos="fade-up"
+     data-aos-delay="100">
 
     <div class="relative overflow-hidden rounded-3xl">
 
@@ -1058,12 +1124,14 @@ initiatives, and impact.
 </div>
 
 <!-- VP -->
-<div class="panel-card">
+<div class="panel-card"
+     data-aos="fade-up"
+     data-aos-delay="200">
 
     <div class="relative overflow-hidden rounded-3xl">
 
         <img
-        src="https://via.placeholder.com/500x600"
+        src="Tabassum Hasnat(VP).jpg"
         class="w-full h-[380px] object-cover">
 
         <div class="panel-overlay"></div>
@@ -1085,12 +1153,14 @@ initiatives, and impact.
 </div>
 
 <!-- GS -->
-<div class="panel-card">
+<div class="panel-card"
+     data-aos="fade-up"
+     data-aos-delay="300">
 
     <div class="relative overflow-hidden rounded-3xl">
 
         <img
-        src="https://via.placeholder.com/500x600"
+        src="Dewan_Sohany_Jannat_Urboshy(GS).jpg"
         class="w-full h-[380px] object-cover">
 
         <div class="panel-overlay"></div>
@@ -1112,7 +1182,9 @@ initiatives, and impact.
 </div>
 
 <!-- TREASURER -->
-<div class="panel-card">
+<div class="panel-card"
+     data-aos="fade-up"
+     data-aos-delay="400">
 
     <div class="relative overflow-hidden rounded-3xl">
 
@@ -1145,9 +1217,10 @@ initiatives, and impact.
 </section>
 
 <!-- ALUMNI IMPACT -->
-<section id="alumni" class="py-32 bg-white">
-
+<section id="alumni" class="py-32 bg-white ">
 <div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20"
+     data-aos="fade-up">
 
 <!-- HEADER -->
 <div class="text-center mb-20">
@@ -1179,13 +1252,11 @@ Hear from former Peace Café members who continue to create impact beyond univer
 </h3>
 
 <p class="text-slate-600 leading-8">
-Being part of Peace Café helped me understand real-world leadership,
-teamwork, and social responsibility. The experiences I gained here
-continue to guide my professional journey today.
+An unquiet soul cannot quiet a room. Bring peace to yourself, and only then will you bring peace to other.
 </p>
 
 <div class="mt-6 font-semibold text-blue-600">
-— Former President, Batch 2023
+— Jerin Saida Islam<br>Former Vice-President, Panel 3.0
 </div>
 
 </div>
@@ -1230,10 +1301,10 @@ research institutions, and social impact organizations worldwide.
 
 <div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent">
 <p class="text-slate-600 italic">
-“Peace Café gave me the confidence to speak, lead, and grow.”
+"Peace Cafe wasn’t just a chapter in our university lives; Peace Cafe is where we learned to transform vision into action, and we carry that commitment to empathy, leadership, and lifelong community forward.
 </p>
 <div class="mt-4 font-semibold text-blue-600">
-Alumni Member
+— Oindree Roy<br>Former TREASURER, Panel 3.0
 </div>
 </div>
 
@@ -1270,14 +1341,16 @@ Explore More Alumni Stories
 </div>
 
 </div>
+</div>
 
 </section>
 
 <!-- FAQ -->
 <!-- FAQ -->
-<section id="faq" class="py-32 bg-slate-50">
-
+<section id="faq" class="py-32 bg-slate-50 ">
 <div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16"
+     data-aos="fade-up">
 
 <!-- HEADER -->
 <div class="text-center mb-16">
@@ -1296,14 +1369,14 @@ Quick answers to the most common questions about Peace Café.
 <div class="grid md:grid-cols-2 gap-8">
 
 <!-- CARD 1 -->
-<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+<div class="faq-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
 
 <button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
 What is Peace Café?
-<span class="text-blue-600 text-2xl">+</span>
+<span class="faq-icon text-blue-600 text-2xl">+</span>
 </button>
 
-<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+<div class="faq-answer text-slate-600 leading-7">
 Peace Café is a student-led platform under the Centre for Peace and Justice (CPJ), BRAC University,
 focused on leadership, peacebuilding, and social impact initiatives.
 </div>
@@ -1311,14 +1384,14 @@ focused on leadership, peacebuilding, and social impact initiatives.
 </div>
 
 <!-- CARD 2 -->
-<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+<div class="faq-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
 
 <button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
 How can I join Peace Café?
-<span class="text-blue-600 text-2xl">+</span>
+<span class="faq-icon text-blue-600 text-2xl">+</span>
 </button>
 
-<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+<div class="faq-answer text-slate-600 leading-7">
 You can join by applying during our recruitment cycles. Announcements are published on our website
 and official social media pages.
 </div>
@@ -1326,14 +1399,14 @@ and official social media pages.
 </div>
 
 <!-- CARD 3 -->
-<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+<div class="faq-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
 
 <button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
 Who can apply?
-<span class="text-blue-600 text-2xl">+</span>
+<span class="faq-icon text-blue-600 text-2xl">+</span>
 </button>
 
-<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+<div class="faq-answer text-slate-600 leading-7">
 All BRAC University students who are interested in leadership, social impact, and community engagement
 are eligible to apply.
 </div>
@@ -1341,14 +1414,14 @@ are eligible to apply.
 </div>
 
 <!-- CARD 4 -->
-<div class="info-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
+<div class="faq-card bg-white p-8 rounded-3xl shadow-sm border border-transparent">
 
 <button class="faq-question w-full text-left flex justify-between items-center font-bold text-lg">
 Do I need prior experience?
-<span class="text-blue-600 text-2xl">+</span>
+<span class="faq-icon text-blue-600 text-2xl">+</span>
 </button>
 
-<div class="faq-answer hidden mt-4 text-slate-600 leading-7">
+<div class="faq-answer text-slate-600 leading-7">
 No prior experience is required. We focus on learning, leadership development, and collaboration.
 </div>
 
@@ -1356,6 +1429,7 @@ No prior experience is required. We focus on learning, leadership development, a
 
 </div>
 
+</div>
 </div>
 
 </section>
@@ -1408,7 +1482,7 @@ This is your opportunity to grow, lead, and make real change.
 </div>
 
 <!-- CTA BUTTON -->
-<a href="recruitment.html"
+<a href="index.html"
    class="inline-block px-10 py-4 rounded-full font-bold text-blue-700
           bg-gradient-to-r from-white via-blue-50 to-blue-100
           shadow-md transition-all duration-300
@@ -1527,25 +1601,8 @@ Built with purpose & student leadership
 </div>
 
 </footer>
-<script>
 
-const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 50){
-
-        navbar.classList.add("scrolled");
-
-    } else {
-
-        navbar.classList.remove("scrolled");
-
-    }
-
-});
-
-</script>
 <script>
 
 const counters =
@@ -1604,35 +1661,7 @@ counters.forEach(counter =>
 observer.observe(counter));
 
 </script>
-<script>
-const questions = document.querySelectorAll(".faq-question");
 
-questions.forEach(q => {
-    q.addEventListener("click", () => {
-
-        const answer = q.nextElementSibling;
-        const icon = q.querySelector("span");
-
-        const isOpen = !answer.classList.contains("hidden");
-
-        // close all
-        document.querySelectorAll(".faq-answer").forEach(a => {
-            a.classList.add("hidden");
-        });
-
-        document.querySelectorAll(".faq-question span").forEach(i => {
-            i.textContent = "+";
-        });
-
-        // open current if closed
-        if(!isOpen){
-            answer.classList.remove("hidden");
-            icon.textContent = "−";
-        }
-
-    });
-});
-</script>
 <script>
 
 // =========================
@@ -1694,5 +1723,15 @@ window.addEventListener("scroll", () => {
 });
 
 </script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 900,
+    once: true,
+    offset: 100
+});
+</script>
+
 </body>
 </html>
