@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creative & IT | Peace Café</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* HERO */
+.hero-bg{
+    background:
+    linear-gradient(rgba(15,23,42,.75), rgba(15,23,42,.75)),
+    url("admin-finance-bg.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+/* GLASS */
+.glass{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:24px;
+}
+
+/* CARD */
+.card{
+    transition:.3s ease;
+}
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* PANEL */
+.panel-card{
+    transition:.4s ease;
+}
+.panel-card:hover{
+    transform:translateY(-10px);
+}
+.panel-card img{
+    transition:.5s ease;
+}
+.panel-card:hover img{
+    transform:scale(1.05);
+}
+
+/* GRADIENT BTN */
+.gradient-btn{
+    background:linear-gradient(135deg,#2563eb,#3b82f6,#60a5fa);
+    color:white;
+    transition:.3s;
+}
+.gradient-btn:hover{
+    transform:translateY(-3px);
+}
+.nav-link {
+    color: #1e293b;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+.panel-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(37,99,235,.35),
+        transparent
+    );
+    opacity:0;
+    transition:.45s ease;
+}
+
+.panel-card:hover .panel-overlay{
+    opacity:1;
+}
+.info-card{
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.info-card:hover{
+    background: linear-gradient(
+        135deg,
+        rgba(239,246,255,1) 0%,
+        rgba(219,234,254,1) 50%,
+        rgba(191,219,254,1) 100%
+    );
+
+    border-color:#60a5fa;
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,0.15);
+}
+.panel-card h3{
+    transition:.3s ease;
+}
+
+.panel-card:hover h3{
+    color:#2563eb;
+}
+.workflow-card{
+
+    background:white;
+
+    padding:32px 24px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.05);
+
+    border:1px solid transparent;
+
+    cursor:pointer;
+}
+
+.workflow-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#60a5fa;
+
+    background:linear-gradient(
+        135deg,
+        rgba(239,246,255,1),
+        rgba(219,234,254,1),
+        rgba(191,219,254,1)
+    );
+
+    box-shadow:
+        0 20px 40px rgba(37,99,235,.15);
+}
+
+.workflow-icon{
+
+    font-size:3rem;
+
+    margin-bottom:18px;
+
+    transition:.35s ease;
+}
+
+.workflow-card:hover .workflow-icon{
+
+    transform:scale(1.15);
+}
+
+.workflow-card h3{
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+    color:#1e293b;
+}
+
+.workflow-card p{
+
+    font-size:.9rem;
+
+    color:#64748b;
+}
+html{
+    scroll-behavior:smooth;
+}
+.hero-btn{
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    transition:all .4s ease;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.20);
+
+    animation:floatButton 3s ease-in-out infinite;
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,0.20);
+
+    box-shadow:
+        0 20px 40px rgba(37,99,235,.35);
+}
+
+.hero-btn svg{
+
+    transition:.3s ease;
+}
+
+.hero-btn:hover svg{
+
+    transform:translateY(4px);
+}
+
+@keyframes floatButton{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+<!-- NAVBAR -->
+<nav id="navbar"
+     class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="Website.html"
+       id="logoText"
+       class="text-2xl font-bold text-blue-600">
+        🕊 Peace Café | BRAC University
+    </a>
+
+    <!-- LINKS -->
+    <div id="navLinks"
+         class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+        <a href="Website.html#home" class="nav-link">Home</a>
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#team" class="nav-link">Team</a>
+
+    </div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg min-h-screen flex items-center justify-center text-white">
+
+<div class="max-w-5xl mx-auto px-6 text-center">
+
+<h1 class="text-5xl md:text-7xl font-bold mb-6"
+data-aos="fade-up">
+Creative and IT
+</h1>
+
+<p class="text-xl text-slate-200 max-w-2xl mx-auto mb-10"
+data-aos="fade-up"
+data-aos-delay="100">
+Innovation • Design • Technology
+</p>
+
+<a href="#overview"
+class="hero-btn inline-flex items-center gap-3"
+data-aos="zoom-in"
+data-aos-delay="200">
+
+<span>Explore Now</span>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="20"
+     height="20"
+     fill="none"
+     viewBox="0 0 24 24"
+     stroke="currentColor">
+
+<path stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M19 9l-7 7-7-7"/>
+
+</svg>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview" class="py-28 px-6">
+<div class="max-w-6xl mx-auto text-center">
+
+<h2 class="text-4xl font-bold mb-6" data-aos="fade-up">
+Department Overview
+</h2>
+
+<p class="text-slate-600 leading-8 max-w-3xl mx-auto"
+data-aos="fade-up" data-aos-delay="100">
+
+The Creative & IT Department combines technology and creativity to build
+Peace Café's digital presence. The department manages graphic design,
+branding, multimedia content, web development, and technical support
+for organizational activities and campaigns.
+
+
+</p>
+
+</div>
+</section>
+
+<!-- RESPONSIBILITIES -->
+<section class="pb-28 px-6">
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+
+    <!-- Cmapaigns -->
+    <div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent"
+         data-aos="fade-up">
+
+        <div class="text-4xl mb-4">🎨</div>
+
+        <h3 class="text-xl font-bold mb-3 text-slate-800">
+            Creative Design
+        </h3>
+
+        <p class="text-slate-600 leading-7">
+            Creating graphics, branding materials, and visual content.
+        </p>
+
+    </div>
+
+    <!-- Social Media -->
+    <div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent"
+         data-aos="fade-up"
+         data-aos-delay="100">
+
+        <div class="text-4xl mb-4">💻</div>
+
+        <h3 class="text-xl font-bold mb-3 text-slate-800">
+            Technology Support
+        </h3>
+
+        <p class="text-slate-600 leading-7">
+            Managing websites, systems, and technical operations.
+        </p>
+
+    </div>
+
+    <!-- Branding -->
+    <div class="info-card bg-slate-50 p-8 rounded-3xl border border-transparent"
+         data-aos="fade-up"
+         data-aos-delay="200">
+
+        <div class="text-4xl mb-4">📱</div>
+
+        <h3 class="text-xl font-bold mb-3 text-slate-800">
+            Digital Innovation
+        </h3>
+
+        <p class="text-slate-600 leading-7">
+            Developing digital solutions and enhancing user experiences.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- WORKFLOW --> <section id="workflow" class="py-28 bg-slate-50 px-6"> 
+    <div class="max-w-7xl mx-auto">
+         <div class="text-center mb-20" data-aos="fade-up">
+             <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4"> 
+                WORKFLOW </p> 
+                <h2 class="text-5xl font-bold text-slate-900"> 
+                    How We Operate </h2>
+                     <p class="text-slate-600 max-w-2xl mx-auto mt-4"> 
+                        Structured process for creating impactful designs and delivering
+reliable technological solutions.
+                    </p> 
+                </div> 
+                <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6"> 
+                    <!-- STEP 1 --> 
+                     <div class="workflow-card" data-aos="fade-up">
+<div class="workflow-icon">💡</div>
+<h3>Ideate</h3><p>Creative concepts</p>
+</div>
+                    <!-- STEP 2 --> 
+                     <div class="workflow-card" data-aos="fade-up" data-aos-delay="100"> 
+                        
+<div class="workflow-icon">🎨</div>
+<h3>Design</h3>
+<p>Visual development</p>
+</div>
+                        <!-- STEP 3 --> 
+                         <div class="workflow-card" data-aos="fade-up" data-aos-delay="200">
+                             
+<div class="workflow-icon">🔍</div>
+<h3>Review</h3>
+<p>Quality check</p>
+</div> 
+                            <!-- STEP 4 --> 
+                             <div class="workflow-card" data-aos="fade-up" data-aos-delay="300"> 
+                                
+<div class="workflow-icon">💻</div>
+<h3>Develop</h3>
+<p>Technical implementation</p>
+</div>
+
+                                <!-- STEP 5 --> 
+                                 <div class="workflow-card" data-aos="fade-up" data-aos-delay="400">
+                                     <div class="workflow-icon">🚀</div>
+<h3>Launch</h3>
+<p>Deployment</p>
+</div>
+                                    <!-- STEP 6 -->
+                                     
+                                    <div class="workflow-card" data-aos="fade-up" data-aos-delay="500"> 
+                                        <div class="workflow-icon">📊</div>
+<h3>Improve</h3>
+<p>Optimization</p>
+</div> 
+                                </div> 
+                            </div>
+                         </section>
+
+<!-- TEAM -->
+<!-- TEAM -->
+<section id="team" class="py-28 px-6">
+
+<div class="text-center mb-20" data-aos="fade-up">
+
+    <p class="text-blue-600 font-semibold tracking-[0.3em] uppercase mb-4">
+        MEET THE TEAM
+    </p>
+
+    <h2 class="text-5xl font-bold text-slate-900">
+        Creative & IT Leadership
+    </h2>
+
+</div>
+
+<div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+
+<!-- DIRECTOR -->
+<div class="panel-card" data-aos="fade-up">
+
+    <div class="relative overflow-hidden rounded-3xl">
+        <img src="MARKETING_DIRECTOR.jpg"
+             class="w-full h-[420px] object-cover">
+        <div class="panel-overlay"></div>
+    </div>
+
+    <div class="pt-6 text-center">
+        <h3 class="text-2xl font-bold">Director</h3>
+        <p class="text-blue-600 mt-2">[Director Name]</p>
+    </div>
+
+</div>
+
+<!-- JOINT DIRECTOR -->
+<div class="panel-card" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="relative overflow-hidden rounded-3xl">
+        <img src="MARKETING_JOINT.jpg"
+             class="w-full h-[420px] object-cover">
+        <div class="panel-overlay"></div>
+    </div>
+
+    <div class="pt-6 text-center">
+        <h3 class="text-2xl font-bold">Joint Director</h3>
+        <p class="text-blue-600 mt-2">[Name Here]</p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white py-10">
+<div class="max-w-6xl mx-auto text-center text-slate-400 text-sm">
+© 2026 Peace Café | BRAC University
+</div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:900, once:true});
+</script>
+<script>
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener('click', function(e){
+
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if(target){
+
+            e.preventDefault();
+
+            window.scrollTo({
+                top: target.offsetTop - 90,
+                behavior: 'smooth'
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
